@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ROYALUST × Big Island Retreat Ops Playbook — Investor Edition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg-1:#0a0712; /* deep cosmos */
+      --bg-2:#140a22; /* royal violet */
+      --bg-3:#1e0f33; /* nebula */
+      --text:#e8e0d0; /* parchment */
+      --muted:#cbbfb0;
+      --ink:#b2a694;
+      --gold:#e5c27b;
+      --gold-2:#f0d9a3;
+      --gold-3:#9b7d46;
+      --line:#2d1a40;
+      --card:#120b1d; /* panel */
+      --card-2:#0f0a18;
+      --accent:#9a7cff;
+      --success:#63d297;
+      --danger:#ff6b6b;
+      --shadow:0 10px 40px rgba(0,0,0,.45);
+      --radius:22px;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 70% -10%, rgba(139,94,209,.20), transparent 60%),
+        radial-gradient(900px 500px at 10% 10%, rgba(255,215,160,.08), transparent 55%),
+        radial-gradient(1200px 800px at 50% 100%, rgba(39,16,59,.9), rgba(9,6,15,1)),
+        linear-gradient(180deg, var(--bg-2), var(--bg-1));
+      font-family: 'Cormorant Garamond', serif;
+      line-height:1.55;
+      letter-spacing:.1px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    .stars:before{
+      content:"";
+      position:fixed;inset:0;pointer-events:none;z-index:0;
+      background-image:radial-gradient(2px 2px at 20% 20%, rgba(255,255,255,.15), transparent 60%),
+                       radial-gradient(1.5px 1.5px at 70% 30%, rgba(255,255,255,.12), transparent 60%),
+                       radial-gradient(1px 1px at 40% 80%, rgba(255,255,255,.10), transparent 60%);
+      background-repeat:repeat;opacity:.6;
+    }
+    a{color:var(--gold-2); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1100px;margin-inline:auto;padding:32px;position:relative;z-index:1}
+    /* NAV */
+    .nav{position:sticky;top:0;z-index:10;backdrop-filter: blur(8px);}
+    .nav-inner{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;
+      padding:18px 24px;margin:16px auto;max-width:1140px;
+      background:linear-gradient(180deg, rgba(255,230,180,.06), rgba(255,230,180,0)) , rgba(9,6,15,.55);
+      border:1px solid rgba(229,194,123,.18);
+      border-radius:14px;box-shadow:var(--shadow);
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand h1{margin:0;font-family:'Cinzel', serif;font-weight:800;letter-spacing:.18em;color:var(--gold-2);font-size:22px}
+    .orb{width:22px;height:22px;border-radius:999px;background:radial-gradient(circle at 30% 30%, #f9e5b8, #b18b4b 55%, #5b3a16 80%); box-shadow:0 0 18px rgba(229,194,123,.45), inset 0 0 10px rgba(255,245,215,.5)}
+    .nav a.btn{font-family:'Inter', sans-serif;font-weight:600;letter-spacing:.02em;}
+    .menu{display:flex;gap:8px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      padding:12px 16px;border-radius:999px;border:1px solid rgba(229,194,123,.3);
+      background:linear-gradient(180deg, rgba(229,194,123,.18), rgba(229,194,123,.06));
+      color:var(--gold-2);text-shadow:0 0 12px rgba(229,194,123,.25);
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.05), var(--shadow);
+      transition:transform .15s ease, box-shadow .2s ease, filter .2s ease;
+    }
+    .btn:hover{transform:translateY(-1px);filter:brightness(1.06)}
+    .btn.secondary{background:rgba(20,10,34,.6); color:var(--muted)}
+    .btn.print{border-color:rgba(129,255,205,.28); color:#d6ffee; background:linear-gradient(180deg, rgba(99,210,151,.18), rgba(20,50,40,.12));}
+
+    /* HERO */
+    .hero{padding:70px 24px 24px; text-align:center}
+    .hero .kicker{color:var(--muted);letter-spacing:.2em;font-family:'Inter',sans-serif;font-size:13px;margin-bottom:12px}
+    .hero h2{margin:6px auto 16px;max-width:980px;font-size:clamp(36px, 5vw, 64px);line-height:1.08;font-family:'Cinzel', serif;font-weight:800;letter-spacing:.06em;color:var(--gold-2);text-transform:uppercase; text-shadow:0 0 30px rgba(229,194,123,.25)}
+    .hero p{max-width:820px;margin:0 auto 24px;color:#dacfbf;font-size:20px}
+    .hero .cta{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:18px}
+
+    .divider{height:1px;margin:42px auto;max-width:920px;background:linear-gradient(90deg, transparent, rgba(229,194,123,.45), transparent)}
+
+    /* SECTION CARDS */
+    .grid{display:grid;grid-template-columns:1fr;gap:22px}
+    @media(min-width:880px){.grid{grid-template-columns:1fr 1fr}}
+
+    .card{
+      position:relative;overflow:hidden;border-radius:var(--radius);
+      background:
+        linear-gradient(180deg, rgba(255,236,200,.04), rgba(255,236,200,0)),
+        radial-gradient(140% 120% at 100% 0%, rgba(255,215,160,.05), transparent 60%),
+        linear-gradient(180deg, var(--card), var(--card-2));
+      border:1px solid rgba(229,194,123,.18);
+      box-shadow:var(--shadow);
+    }
+    .card .head{display:flex;align-items:center;gap:14px; padding:22px 22px 6px}
+    .pill{font-family:'Inter',sans-serif;font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:11px;color:#bcae99;background:rgba(229,194,123,.12);border:1px solid rgba(229,194,123,.22);padding:6px 10px;border-radius:999px}
+    .card h3{margin:0; font-family:'Cinzel',serif; font-weight:800; letter-spacing:.08em; font-size:22px;color:var(--gold-2); text-transform:uppercase}
+    .card .content{padding:6px 22px 22px}
+    .prose p{margin:10px 0}
+    ul.check{list-style:none;padding-left:0;margin:12px 0}
+    ul.check li{display:flex;gap:12px;align-items:flex-start;margin:10px 0;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.02);border:1px solid rgba(229,194,123,.10)}
+    .cb{width:20px;height:20px;margin-top:2px;accent-color:var(--gold)}
+    .note{color:#bda; font-style:italic}
+    .quote{border-left:3px solid rgba(229,194,123,.45); padding:10px 16px; background:rgba(229,194,123,.06); border-radius:14px; color:#efe6d8}
+    .links a{display:inline-block;margin:6px 10px 0 0}
+
+    /* Accordion behaviour */
+    details{border-radius:var(--radius); border:1px solid rgba(229,194,123,.15); background:linear-gradient(180deg, rgba(229,194,123,.07), rgba(229,194,123,.03)); box-shadow:var(--shadow);}
+    details + details{margin-top:14px}
+    summary{cursor:pointer;padding:18px 20px; list-style:none;}
+    summary::-webkit-details-marker{display:none}
+    summary h4{display:inline; font-family:'Cinzel',serif; font-size:18px; letter-spacing:.06em; color:var(--gold-2)}
+    .accordion{padding:0 20px 18px}
+
+    /* Footer */
+    .footer{margin:50px 0 24px; text-align:center; color:var(--ink)}
+
+    /* Utility */
+    .actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:rgba(99,210,151,.14);border:1px solid rgba(99,210,151,.3); color:#d8ffe8; font-family:'Inter',sans-serif;font-weight:600;font-size:12px}
+    .danger{background:rgba(255,107,107,.12);border-color:rgba(255,107,107,.3); color:#ffdede}
+    .muted{color:var(--ink)}
+
+    /* Search */
+    .search{display:flex; gap:10px; align-items:center; margin:12px 0 22px}
+    .search input{flex:1; padding:12px 14px; border-radius:12px; border:1px solid rgba(229,194,123,.18); background:rgba(255,255,255,.06); color:var(--text)}
+
+    .print-hint{font-family:'Inter',sans-serif;font-size:12px;color:var(--ink); margin-top:4px}
+  </style>
+</head>
+<body class="stars">
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <div class="orb" aria-hidden="true"></div>
+        <h1>ROYALUST</h1>
+      </div>
+      <div class="menu">
+        <a class="btn" href="#ops">Ops Plan</a>
+        <a class="btn" href="#permit">Special / Use Permit</a>
+        <a class="btn" href="#pma">PMA Checklist</a>
+        <a class="btn secondary" href="#binder">Compliance Binder</a>
+        <a class="btn print" href="#" id="printBtn">Print / PDF</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero wrap">
+    <div class="kicker">Sovereign Collective — Investor Edition</div>
+    <h2>Transmute Lust. Build Legacy.</h2>
+    <p>Channel sexual energy into creative life force. Success is a team sport. Join the sovereign collective.</p>
+    <div class="cta">
+      <a class="btn" href="#join">Join the Circle</a>
+      <a class="btn secondary" href="#code">Read the Royalust Code</a>
+    </div>
+    <div class="divider" aria-hidden="true"></div>
+  </header>
+
+  <main id="ops" class="wrap">
+    <div class="actions" style="justify-content:space-between; align-items:end">
+      <div>
+        <span class="badge">Live Tracker Enabled</span>
+        <span class="badge danger">Private / Members-Only</span>
+      </div>
+      <div style="max-width:420px;flex:1">
+        <div class="search">
+          <input id="search" placeholder="Type to filter this playbook (e.g., ‘tents’, ‘GET’, ‘curfew’)" />
+        </div>
+        <div class="print-hint">Items you check are saved locally in this browser (localStorage). Use the Print / PDF button to export progress for Richard.</div>
+      </div>
+    </div>
+
+    <!-- GRID SECTIONS 1–9 -->
+    <section class="grid" aria-label="Operations Plan">
+
+      <article class="card" id="safe">
+        <div class="head"><span class="pill">1) Safe Operating Mode</span><h3>Lowest-Risk Path (Now)</h3></div>
+        <div class="content">
+          <ul class="check">
+            <li><input class="cb" type="checkbox" data-key="safe-1"/> <div>Now (lowest risk): run day-use, private educational workshops under PMA.</div></li>
+            <li><input class="cb" type="checkbox" data-key="safe-2"/> <div>Frame as “educational retreats / sustainability workshops” — fits Ag District uses.</div></li>
+            <li><input class="cb" type="checkbox" data-key="safe-3"/> <div>Later (if overnights): either partner with permitted lodging OR pursue County permits for accommodations + TAT filings.</div></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card" id="structures">
+        <div class="head"><span class="pill">2) Structures</span><h3>Keep Them Legal or Exempt</h3></div>
+        <div class="content">
+          <ul class="check">
+            <li><input class="cb" type="checkbox" data-key="str-1"/> <div>Use only permitted or exempt accessory structures (non-habitable, ≤600 sq ft on Ag).</div></li>
+            <li><input class="cb" type="checkbox" data-key="str-2"/> <div>NO permanent sleeping or plumbing in exempt sheds/yurts.</div></li>
+            <li><input class="cb" type="checkbox" data-key="str-3"/> <div>File Ag-exempt declaration with County if required; keep acknowledgment in binder.</div></li>
+            <li><input class="cb" type="checkbox" data-key="str-4"/> <div>Tents &gt;700 sq ft → Fire Dept. permit.</div></li>
+            <li><input class="cb" type="checkbox" data-key="str-5"/> <div>Assembly load ≥300 → Assembly permit.</div></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card" id="health">
+        <div class="head"><span class="pill">3) Health, Food &amp; Sanitation</span><h3>DOH & On-Site Requirements</h3></div>
+        <div class="content">
+          <ul class="check">
+            <li><input class="cb" type="checkbox" data-key="hfs-1"/> <div>Food prep = DOH Special Event Food Establishment permit OR licensed caterer.</div></li>
+            <li><input class="cb" type="checkbox" data-key="hfs-2"/> <div>Portable toilets + hand-wash stations required; keep service receipts.</div></li>
+            <li><input class="cb" type="checkbox" data-key="hfs-3"/> <div>Document compliance in binder.</div></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card" id="private">
+        <div class="head"><span class="pill">4) Make the Event Private</span><h3>Membership-Only Operations</h3></div>
+        <div class="content">
+          <ul class="check">
+            <li><input class="cb" type="checkbox" data-key="priv-1"/> <div>Membership application → approval → signed agreement.</div></li>
+            <li><input class="cb" type="checkbox" data-key="priv-2"/> <div>Website: “Private, members-only; application/invitation only.”</div></li>
+            <li><input class="cb" type="checkbox" data-key="priv-3"/> <div>No public ticket sales.</div></li>
+            <li><input class="cb" type="checkbox" data-key="priv-4"/> <div>Gate signage: “Private Event — Members &amp; Invited Guests Only.”</div></li>
+            <li><input class="cb" type="checkbox" data-key="priv-5"/> <div>Maintain roster on site.</div></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card" id="neighbor">
+        <div class="head"><span class="pill">5) Neighbor &amp; Nuisance Controls</span><h3>Respect the Village</h3></div>
+        <div class="content">
+          <ul class="check">
+            <li><input class="cb" type="checkbox" data-key="neigh-1"/> <div>Headcount cap tied to parking capacity.</div></li>
+            <li><input class="cb" type="checkbox" data-key="neigh-2"/> <div>Noise plan &amp; curfew (quiet hours).</div></li>
+            <li><input class="cb" type="checkbox" data-key="neigh-3"/> <div>On-site parking only; use cones/attendant.</div></li>
+            <li><input class="cb" type="checkbox" data-key="neigh-4"/> <div>Neighbor contact phone at entrance; document response.</div></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card" id="binder">
+        <div class="head"><span class="pill">6) Compliance Binder</span><h3>Bring to Every Event</h3></div>
+        <div class="content">
+          <p class="muted">Must have at every event:</p>
+          <ul class="check">
+            <li><input class="cb" type="checkbox" data-key="bind-1"/> <div>TMK zoning printout + Code Ch.25 excerpts.</div></li>
+            <li><input class="cb" type="checkbox" data-key="bind-2"/> <div>EPIC/Building docs + ag-exempt declarations.</div></li>
+            <li><input class="cb" type="checkbox" data-key="bind-3"/> <div>Tent/Fire permits, food permits, portable toilet contract.</div></li>
+            <li><input class="cb" type="checkbox" data-key="bind-4"/> <div>Insurance certs (general liability + participant accident).</div></li>
+            <li><input class="cb" type="checkbox" data-key="bind-5"/> <div>Member roster + signed agreements + safety briefing sheet.</div></li>
+            <li><input class="cb" type="checkbox" data-key="bind-6"/> <div>Incident log.</div></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card" id="taxes">
+        <div class="head"><span class="pill">7) Taxes &amp; Filings</span><h3>GET / TAT Discipline</h3></div>
+        <div class="content">
+          <ul class="check">
+            <li><input class="cb" type="checkbox" data-key="tax-1"/> <div>Collect/remit GET on dues/fees.</div></li>
+            <li><input class="cb" type="checkbox" data-key="tax-2"/> <div>Overnight consideration = TAT (10.25%) + County 3%.</div></li>
+            <li><input class="cb" type="checkbox" data-key="tax-3"/> <div>File TA-1/TA-2 + County portal.</div></li>
+            <li><input class="cb" type="checkbox" data-key="tax-4"/> <div>Keep PMA books separate from LLC.</div></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card" id="tripwires">
+        <div class="head"><span class="pill">8) Tripwires (Auto Pause)</span><h3>Instant Stop Conditions</h3></div>
+        <div class="content">
+          <ul class="check">
+            <li><input class="cb" type="checkbox" data-key="tri-1"/> <div>Adding sleeping/plumbing to exempt structure.</div></li>
+            <li><input class="cb" type="checkbox" data-key="tri-2"/> <div>Using tents &gt;700 sq ft without Fire permit.</div></li>
+            <li><input class="cb" type="checkbox" data-key="tri-3"/> <div>Advertising public tickets.</div></li>
+            <li><input class="cb" type="checkbox" data-key="tri-4"/> <div>Scaling headcount beyond safe parking/noise.</div></li>
+            <li><input class="cb" type="checkbox" data-key="tri-5"/> <div>Any neighbor complaint or inspector visit → pause + remediate.</div></li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card" id="reassurance">
+        <div class="head"><span class="pill">9) Reassurance to Richard</span><h3>Why This Is Safe</h3></div>
+        <div class="content">
+          <div class="quote">
+            <p>We’re locking this down on four fronts:</p>
+            <ol>
+              <li>Private, invitation-only educational day-use retreats under PMA.</li>
+              <li>Only permitted or exempt non-habitable Ag structures (with tent/FD permits as needed).</li>
+              <li>DOH food &amp; sanitation support (toilets, handwash, caterers).</li>
+              <li>A compliance binder + neighbor-friendly operating plan.</li>
+            </ol>
+            <p>This keeps us aligned with County zoning/building rules ✅ and avoids the triggers that bring inspectors 🚫 while we plan long-term permitted overnight options.</p>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- SPECIAL / USE PERMIT PLAYBOOK -->
+    <section id="permit" class="card" style="margin-top:22px">
+      <div class="head"><span class="pill">Special / Use Permit Playbook — ROYALUST (Big Island)</span><h3>Land-Use Pathfinding</h3></div>
+      <div class="content prose">
+        <details open>
+          <summary><h4>0) WHICH PERMIT DO WE NEED?</h4></summary>
+          <div class="accordion">
+            <ul>
+              <li>If your TMK is in the State Land Use Agricultural/Rural district → apply for a Special Permit (HRS §205-6) via the County Planning Commission.</li>
+              <li>If (less likely) your TMK is in the State Urban district → apply for a County Use Permit (HCC Ch. 25).</li>
+            </ul>
+            <div class="links">
+              <a href="https://luc.hawaii.gov/maps/">Check State district map</a> ·
+              <a href="https://geoportal.hawaii.gov/datasets/HiStateGIS::state-land-use-districts/about">GIS layer</a>
+            </div>
+          </div>
+        </details>
+
+        <details>
+          <summary><h4>1) PREP &amp; PRE-APPLICATION</h4></summary>
+          <div class="accordion">
+            <ul>
+              <li>Confirm TMK, State district, County zoning + constraints:
+                <div class="links">
+                  <a href="https://www.planning.hawaiicounty.gov/resources/resources-references/maps">County maps/GIS</a>
+                </div>
+              </li>
+              <li>Book a pre-application with Hawaiʻi County Planning:
+                <div class="links">
+                  <a href="https://www.planning.hawaiicounty.gov/i-want-to/apply/for-a-land-use-permit">Apply for a land-use permit</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary><h4>2) PICK THE PATH &amp; GATHER EXHIBITS</h4></summary>
+          <div class="accordion">
+            <ul>
+              <li>Special Permit (Ag/Rural) — application form (County Planning Commission):
+                <div class="links">
+                  <a href="https://records.hawaiicounty.gov/WebLink/1/edoc/55600/Special%20Permit.pdf">Special Permit PDF</a>
+                </div>
+              </li>
+              <li>Use Permit (Urban) — follow HCC Ch.25 procedures (public hearing/standards).
+                <div class="links">
+                  <a href="https://localhawaiirealestate.com/Docs%20and%20Forms/public/chapter25.pdf">Code (Ch.25)</a>
+                </div>
+              </li>
+              <li>Exhibits to include (concise):
+                <ul>
+                  <li>Site plan (parking, fire access) + floor plans; operations plan (max guests, hours, noise).</li>
+                  <li>Infrastructure: water, wastewater, toilets; DOH e-Permitting if needed → <a href="https://eha-cloud.doh.hawaii.gov/epermit/">DOH e-Permitting</a></li>
+                  <li>Traffic/parking memo, neighbor list + outreach plan.</li>
+                  <li>Compliance narrative hitting HCC §25-2-65 standards (and HRS §205-6 “unusual &amp; reasonable” test).</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary><h4>3) FILE, NOTICE &amp; HEARING</h4></summary>
+          <div class="accordion">
+            <ul>
+              <li>Submit to County Planning per the permit type (Special or Use). The County sets the hearing, publishes notice, and routes agencies for comment.</li>
+              <li>Timeline cue (Use Permit): Public hearing is typically scheduled within ~90 days of acceptance (see Ch.25 procedures).</li>
+              <li>Acreage note: If your Special Permit area is &gt;15 acres, final action goes to the State Land Use Commission after the County hearing.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary><h4>4) AFTER APPROVAL (CONDITIONS)</h4></summary>
+          <div class="accordion">
+            <ul>
+              <li>Read every condition (hours, headcount, parking, sound, tents, sanitation, fire, reporting).</li>
+              <li>Pull any follow-on Plan Approval / Building permits via County:
+                <div class="links">
+                  <a href="https://records.hawaiicounty.gov/WebLink/1/edoc/70368/Plan%20Approval%20Application.pdf">Plan Approval application</a> ·
+                  <a href="https://hawaii-county-public-works-hawaiicountygis.hub.arcgis.com/pages/blg-epic-help-library">EPIC help (building permits)</a> ·
+                  <a href="https://hawaii-county-public-works-hawaiicountygis.hub.arcgis.com/pages/blg-permit-info">Building permit info</a>
+                </div>
+              </li>
+              <li>If lodging is included, align GET/TAT registrations/filings per your CPA.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary><h4>5) UNTIL PERMIT IS ISSUED</h4></summary>
+          <div class="accordion">
+            <ul>
+              <li>Run day-use only under your PMA; members sleep off-site.</li>
+              <li>Keep private (applications/memberships; no public ticketing), post “Private Event” signage, and maintain a compliance binder on site.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- PMA CHECKLIST -->
+    <section id="pma" class="card" style="margin-top:22px">
+      <div class="head"><span class="pill">ROYALUST × PMA Checklist — Hawaiʻi Island (Ag Land)</span><h3>Private Membership Architecture</h3></div>
+      <div class="content prose">
+        <details open>
+          <summary><h4>1) STRUCTURE (KEEP YOUR EXISTING ENTITIES)</h4></summary>
+          <div class="accordion">
+            <ul>
+              <li>Keep JASMINE HILL CAPITAL (LLLP) as land/asset owner.</li>
+              <li>Keep ROYALUST LLC for brand + any public-facing/online offerings.</li>
+              <li>Create a SEPARATE PMA (unincorporated private membership association) for member-only retreats.</li>
+              <li>IRS EIN application (free): <a href="https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number">https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number</a></li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary><h4>2) PMA PAPERWORK</h4></summary>
+          <div class="accordion">
+            <ul>
+              <li>Draft: founding charter/bylaws, membership agreement, assumption-of-risk &amp; liability waiver, code of conduct, privacy/confidentiality.</li>
+              <li>Get an EIN for the PMA (IRS link above) and open a dedicated bank account.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary><h4>3) INTER-ENTITY AGREEMENTS</h4></summary>
+          <div class="accordion">
+            <ul>
+              <li>Lease, license, or use agreement: LLLP/LLC → PMA (scope, dates, indemnities, maintenance, insurance).</li>
+              <li>Cross-indemnification + additional-insured endorsements.</li>
+              <li>Participant accident &amp; general liability policies sized to headcount/activities.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary><h4>4) PUBLIC VS PRIVATE OPS</h4></summary>
+          <div class="accordion">
+            <ul>
+              <li>Website: “Private, members-only; by application/invitation; not open to the general public.”</li>
+              <li>No public ticket sales pages (no Eventbrite/Airbnb-style listings).</li>
+              <li>Intake: application → approval → membership agreement → dues/payment → RSVP.</li>
+              <li>On-site signage &amp; roster: “Private Event — Members &amp; Invited Guests Only.”</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary><h4>5) LAND USE &amp; BUILDING (DO NOT SKIP)</h4></summary>
+          <div class="accordion">
+            <ul>
+              <li>Confirm zoning + permitted uses (Ag District) via:
+                <div class="links">
+                  <a href="https://www.planning.hawaiicounty.gov/resources/resources-references/zoning-land-use">Zoning &amp; Land Use hub</a> ·
+                  <a href="https://www.hawaiicounty.gov/i-want-to/read/county-code">County Code Ch. 25</a> ·
+                  <a href="https://www.planning.hawaiicounty.gov/resources/zone-maps">Zone Maps</a> ·
+                  <a href="https://www.planning.hawaiicounty.gov/resources/resources-references/maps">TMK + Maps hub</a>
+                </div>
+              </li>
+              <li>For any structures: verify if exempt vs. permit-required in EPIC.
+                <div class="links">
+                  <a href="https://hawaii-county-public-works-hawaiicountygis.hub.arcgis.com/pages/blg-epic-help-library">EPIC help library</a> ·
+                  <a href="https://hawaii-county-public-works-hawaiicountygis.hub.arcgis.com/pages/building">Building Division home</a>
+                </div>
+              </li>
+              <li>Fire/sanitation/egress: have plans for water, toilets, waste, parking, and noise control (document in your packet).</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary><h4>6) TAXES &amp; FILINGS</h4></summary>
+          <div class="accordion">
+            <ul>
+              <li>Register/maintain GET for revenue (PMA +/or LLC as appropriate).
+                <div class="links">
+                  <a href="https://tax.hawaii.gov/geninfo/get/">GET info + register</a>
+                </div>
+              </li>
+              <li>If ANY consideration is for lodging/overnight stays:
+                <div class="links">
+                  <a href="https://files.hawaii.gov/tax/legal/brochures/TAT_brochure-23.pdf">State TAT overview</a> ·
+                  <a href="https://www.hawaiicounty.gov/departments/finance/transient-accommodations-tax-tat">County 3% TAT info</a> ·
+                  <a href="https://tat.ehawaii.gov/tat/">County TAT payment portal</a>
+                </div>
+              </li>
+              <li>File TA-1/TA-2 (State) and County portion.</li>
+              <li>Keep clean books separating PMA member dues vs. LLC public sales.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary><h4>7) OPERATIONS PLAYBOOK (MEMBERS)</h4></summary>
+          <div class="accordion">
+            <ul>
+              <li>Member folder: signed agreement, waiver, emergency contact, medical/allergy notes.</li>
+              <li>Event SOP: safety brief, boundaries, substance policy, photo/recording rules, quiet hours, wildlife &amp; terrain cautions.</li>
+              <li>Incident log + after-action review for each event (kept private).</li>
+            </ul>
+          </div>
+        </details>
+
+        <details>
+          <summary><h4>8) COMMS &amp; BRAND</h4></summary>
+          <div class="accordion">
+            <ul>
+              <li>External channels = education/storytelling about land &amp; legacy; no “public accommodation” invites.</li>
+              <li>All retreat comms route through PMA application/approval workflow.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <p class="print-hint" style="margin-top:16px">⚖️ <em>Informational playbook</em></p>
+
+  </main>
+
+  <footer class="footer">
+    <div>© <span id="yr"></span> ROYALUST — Sovereign Collective</div>
+  </footer>
+
+  <script>
+    // persist checkbox state
+    const persistKey = (k)=>`royalust:playbook:${k}`;
+    function restore(){
+      document.querySelectorAll('.cb').forEach(cb=>{
+        const k = persistKey(cb.dataset.key);
+        const v = localStorage.getItem(k);
+        if(v!==null){ cb.checked = v === '1'; }
+        cb.addEventListener('change', ()=> localStorage.setItem(k, cb.checked ? '1' : '0'));
+      });
+    }
+    // print
+    document.getElementById('printBtn').addEventListener('click', e=>{ e.preventDefault(); window.print(); });
+    // year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    // search filter
+    const input = document.getElementById('search');
+    input.addEventListener('input', ()=>{
+      const q = input.value.toLowerCase();
+      document.querySelectorAll('section, article, details').forEach(el=>{
+        if(el.matches('details')){
+          // open matching accordions
+          const text = el.innerText.toLowerCase();
+          if(q && text.includes(q)) el.open = true;
+        }
+        if(el.matches('article.card, section.card, details')){
+          const text = el.innerText.toLowerCase();
+          el.style.display = text.includes(q) ? '' : (q ? 'none' : '');
+        }
+      });
+    });
+    restore();
+  </script>
+</body>
+</html>
