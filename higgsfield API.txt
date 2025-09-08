@@ -1,0 +1,135 @@
+# Higgsfield API – endpoints & usage
+
+# Base URL
+base_url: https://platform.higgsfield.ai
+
+# Authentication
+# All endpoints require two headers: an API key and a secret.  
+# You obtain these keys from the Higgsfield dashboard (Quickstart).
+headers:
+  Content-Type: application/json (for POST requests)
+  hf-api-key: <your_api_key>           # UUID string:contentReference[oaicite:0]{index=0}
+  hf-secret: <your_api_secret>         # Secret string:contentReference[oaicite:1]{index=1}
+
+# Endpoints
+
+## 1. POST /v1/image2video   (Image → Video – DoP model)
+# Generates a 5‑second video from one or more images.
+endpoint: POST /v1/image2video
+headers: as above:contentReference[oaicite:2]{index=2}
+body (JSON):
+  webhook (optional):
+    url: webhook callback URL:contentReference[oaicite:3]{index=3}
+    secret: string to verify webhook payload:contentReference[oaicite:4]{index=4}
+  params:
+    model: "dop-lite" (other models like standard or turbo may be available):contentReference[oaicite:5]{index=5}
+    prompt: text prompt (optional):contentReference[oaicite:6]{index=6}
+    seed: integer seed for deterministic results:contentReference[oaicite:7]{index=7}
+    motions: array of motion objects (id + strength):contentReference[oaicite:8]{index=8}
+    input_images: array of images with type and image_url:contentReference[oaicite:9]{index=9}
+    enhance_prompt: boolean to improve prompt:contentReference[oaicite:10]{index=10}
+    check_nsfw: boolean to run NSFW checks:contentReference[oaicite:11]{index=11}
+response:
+  Returns a jobSet object containing:
+    id: job_set_id (UUID):contentReference[oaicite:12]{index=12}
+    type: request type (e.g., text2image_soul):contentReference[oaicite:13]{index=13}
+    created_at: timestamp:contentReference[oaicite:14]{index=14}
+    jobs: list of jobs with status and results (min and raw URLs):contentReference[oaicite:15]{index=15}
+    input_params: echo of request parameters:contentReference[oaicite:16]{index=16}
+
+## 2. POST /v1/speak/higgsfield   (Speech → Video – Speak v2)
+# Generates a talking avatar video from an image and an audio clip.
+endpoint: POST /v1/speak/higgsfield:contentReference[oaicite:17]{index=17}
+headers: same as above:contentReference[oaicite:18]{index=18}
+body (JSON):
+  params:
+    input_image: { type, image_url }:contentReference[oaicite:19]{index=19}
+    input_audio: { type, audio_url }:contentReference[oaicite:20]{index=20}
+    prompt: text prompt to guide mouth movements or style:contentReference[oaicite:21]{index=21}
+    quality: "high" or "mid":contentReference[oaicite:22]{index=22}
+    enhance_prompt: boolean:contentReference[oaicite:23]{index=23}
+    seed: integer:contentReference[oaicite:24]{index=24}
+    duration: length of output video in seconds:contentReference[oaicite:25]{index=25}
+response:
+  Same jobSet structure as above:contentReference[oaicite:26]{index=26}.
+
+## 3. POST /v1/text2image/soul   (Text → Image – Soul model)
+# Generates one or more images from a text prompt.
+endpoint: POST /v1/text2image/soul:contentReference[oaicite:27]{index=27}
+headers: same as above:contentReference[oaicite:28]{index=28}
+body (JSON):
+  webhook (optional): { url, secret }:contentReference[oaicite:29]{index=29}
+  params:
+    prompt: text description:contentReference[oaicite:30]{index=30}
+    width_and_height: dimensions in "widthxheight" format:contentReference[oaicite:31]{index=31}
+    enhance_prompt: boolean:contentReference[oaicite:32]{index=32}
+    style_id: ID of a style (use GET /v1/text2image/soul-styles to list):contentReference[oaicite:33]{index=33}
+    style_strength: numeric strength for style:contentReference[oaicite:34]{index=34}
+    quality: "720p" or "1080p":contentReference[oaicite:35]{index=35}
+    seed: integer:contentReference[oaicite:36]{index=36}
+    custom_reference_id: ID of a trained character (optional):contentReference[oaicite:37]{index=37}
+    custom_reference_strength: numeric weight:contentReference[oaicite:38]{index=38}
+    image_reference: { type, image_url } (optional):contentReference[oaicite:39]{index=39}
+    batch_size: number of images to generate per request:contentReference[oaicite:40]{index=40}
+response:
+  Same jobSet structure with id, jobs, results and input_params:contentReference[oaicite:41]{index=41}.
+
+## 4. GET /v1/job-sets/{job_set_id}
+# Polls the status and results of a generation.
+endpoint: GET /v1/job-sets/{job_set_id}:contentReference[oaicite:42]{index=42}
+headers: hf-api-key, hf-secret:contentReference[oaicite:43]{index=43}
+response:
+  jobSet object identical to the POST responses, containing status and result URLs:contentReference[oaicite:44]{index=44}.
+
+## 5. GET /v1/motions
+# Returns a list of available motion presets for DoP video generation.
+endpoint: GET /v1/motions:contentReference[oaicite:45]{index=45}
+headers: hf-api-key, hf-secret:contentReference[oaicite:46]{index=46}
+response:
+  Array of preset objects: id, name, description, preview_url:contentReference[oaicite:47]{index=47}.
+
+## 6. GET /v1/text2image/soul-styles
+# Lists available styles for Soul image generation.
+endpoint: GET /v1/text2image/soul-styles:contentReference[oaicite:48]{index=48}
+headers: hf-api-key, hf-secret:contentReference[oaicite:49]{index=49}
+response:
+  Array of style objects: id, name, description, preview_url:contentReference[oaicite:50]{index=50}.
+
+## 7. Character management (Soul ID)
+- GET /v1/custom-references/list: paginated list of your characters:contentReference[oaicite:51]{index=51}.
+  Query params: page (default 1), page_size (default 20):contentReference[oaicite:52]{index=52}.
+  Response: object with total, page, page_size and items (each item includes id, name, status, thumbnail_url, timestamps):contentReference[oaicite:53]{index=53}.
+- POST /v1/custom-references: create a character from one or more images:contentReference[oaicite:54]{index=54}.
+  Body: name and input_images array:contentReference[oaicite:55]{index=55}.
+  Response: object with id, name, status, thumbnail_url and timestamps:contentReference[oaicite:56]{index=56}.
+- GET /v1/custom-references/{reference_id}: get status and media for a specific character:contentReference[oaicite:57]{index=57}.
+- DELETE /v1/custom-references/{reference_id}: delete a character:contentReference[oaicite:58]{index=58}.
+
+## 8. Webhook: job-set-complete
+# If you include a `webhook` object (url & secret) in your request, Higgsfield will POST a payload to your URL when the jobSet is complete.
+description:
+  - Add `{ "webhook": { "url": "...", "secret": "..." } }` to your generation request.
+  - On completion, Higgsfield sends a POST with the same jobSet structure and includes an `X‑Webhook‑Secret‑Key` header for verification:contentReference[oaicite:59]{index=59}.
+payload example: same structure as the polling response with id, type, jobs and results:contentReference[oaicite:60]{index=60}.
+
+# Response format (common across endpoints)
+All generation endpoints return a “jobSet” object with:
+  id: unique identifier for the request:contentReference[oaicite:61]{index=61}.
+  type: indicates the model used (e.g., image2video, text2image_soul):contentReference[oaicite:62]{index=62}.
+  created_at: ISO8601 timestamp:contentReference[oaicite:63]{index=63}.
+  jobs: list of job objects; each job has:
+      id: job id,
+      job_set_type: type of generation,
+      status: queued/processing/finished,
+      results: two URLs – “min” (quick preview) and “raw” (full quality):contentReference[oaicite:64]{index=64}.
+  input_params: original request parameters:contentReference[oaicite:65]{index=65}.
+Use GET /v1/job-sets/{job_set_id} or wait for a webhook to retrieve results.
+
+# Rate limits & other requirements
+- Results retention: Generated images/videos are kept for 30 days:contentReference[oaicite:66]{index=66}.
+- Concurrency: For the first 1 000 Soul image generations at 1080p, concurrent operations are limited to **two** generations at a time:contentReference[oaicite:67]{index=67}.
+- API limitations: Higgsfield’s Terms of Use allow the company to restrict the number of API calls, file size and other limits at its discretion; they can enforce these limits and suspend access if exceeded:contentReference[oaicite:68]{index=68}.
+- Credits/Payment: The service uses a credit system (1 USD ≈ 16 credits). Each generation consumes credits based on model, quality and batch size. See the pricing section for details:contentReference[oaicite:69]{index=69}.
+- Authentication keys are generated via the Higgsfield dashboard; they are shown only once and must be stored securely:contentReference[oaicite:70]{index=70}.
+- Jobs are processed asynchronously. You must poll GET /v1/job-sets/{job_set_id} or configure a webhook to know when your job completes:contentReference[oaicite:71]{index=71}.
+
