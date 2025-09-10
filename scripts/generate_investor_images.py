@@ -97,11 +97,11 @@ def integrate_images_into_html(results):
     """Integrate generated images into the wishlist HTML"""
     try:
         # Read the current wishlist HTML
-        with open("wishlist-partial.html", "r", encoding="utf-8") as f:
+        with open("pages/wishlist-partial.html", "r", encoding="utf-8") as f:
             html_content = f.read()
         
         # Create a backup
-        with open("wishlist-partial-full-backup.html", "w", encoding="utf-8") as f:
+        with open("backups/wishlist-partial-full-backup.html", "w", encoding="utf-8") as f:
             f.write(html_content)
         
         print("🔧 Integrating images into HTML...")
@@ -128,10 +128,10 @@ def integrate_images_into_html(results):
                     print(f"⚠️  Could not find target for {result['filename']}: {target}")
         
         # Write the updated HTML back to the original file
-        with open("wishlist-partial.html", "w", encoding="utf-8") as f:
+        with open("pages/wishlist-partial.html", "w", encoding="utf-8") as f:
             f.write(html_content)
         
-        print("🎉 Updated wishlist-partial.html with integrated visualizations!")
+        print("🎉 Updated pages/wishlist-partial.html with integrated visualizations!")
         return True
         
     except Exception as e:

@@ -11,13 +11,16 @@ A comprehensive wellness retreat development project featuring AI-generated visu
 ## 📁 Project Structure
 
 ```
-├── 📄 Main HTML Files
+├── 📄 Main Site
 │   ├── index.html                    # Main landing page
-│   ├── wishlist-partial.html         # Retreat components wishlist
-│   ├── operations-cards.html         # Operations overview
-│   ├── permit-playbook.html          # Permitting guide
-│   ├── pma-checklist.html           # PMA compliance checklist
-│   └── royalust_big_island_retreat_ops_playbook_investor_edition.html
+│   ├── styles.css                    # Main stylesheet
+│   ├── script.js                     # JavaScript functionality
+│   └── pages/                        # All content pages
+│       ├── wishlist-partial.html     # Retreat components wishlist
+│       ├── operations-cards.html     # Operations overview
+│       ├── permit-playbook.html      # Permitting guide
+│       ├── pma-checklist.html        # PMA compliance checklist
+│       └── royalust_big_island_retreat_ops_playbook_investor_edition.html
 │
 ├── 🎨 Assets
 │   ├── images/                       # Optimized WebP images
@@ -53,8 +56,6 @@ A comprehensive wellness retreat development project featuring AI-generated visu
 │   └── old versions/               # Previous file versions
 │
 └── 🎯 Core Files
-    ├── styles.css                  # Main stylesheet
-    ├── script.js                   # JavaScript functionality
     └── .gitignore                  # Git ignore rules
 ```
 

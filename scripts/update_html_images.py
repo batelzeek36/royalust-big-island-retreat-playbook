@@ -72,7 +72,7 @@ def update_html_file(html_file):
 
 def main():
     """Update all HTML files in the current directory"""
-    html_files = glob.glob('*.html')
+    html_files = glob.glob('*.html') + glob.glob('pages/*.html')
     
     if not html_files:
         print("No HTML files found")
