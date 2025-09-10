@@ -49,10 +49,9 @@ def update_html_file(html_file):
         base_name = os.path.splitext(png_filename)[0]
         
         return f'''<picture{class_attr}>
-    <source srcset="images/thumbnails/{base_name}_thumb.webp" media="(max-width: 600px)" type="image/webp">
     <source srcset="images/medium/{base_name}_medium.webp" media="(max-width: 1200px)" type="image/webp">
     <source srcset="images/webp/{base_name}.webp" type="image/webp">
-    <img src="{png_src}" alt="{alt_text}" loading="lazy" style="{style_attr}">
+    <img src="original_images/{png_filename}" alt="{alt_text}" loading="lazy" style="{style_attr}">
 </picture>'''
     
     # Replace all img tags

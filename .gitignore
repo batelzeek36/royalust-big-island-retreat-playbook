@@ -13,3 +13,10 @@ test_*
 
 # Results that might contain API info
 *results*.json
+
+# Large original images - keep optimized versions only
+original_images/
+*.png
+
+# Keep optimized images for web
+!images/
