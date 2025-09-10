@@ -79,14 +79,14 @@
   <script>
     // Load all sections dynamically
     const sections = [
-      { file: 'operations-cards.html', container: 'operations-container' },
-      { file: 'permit-playbook.html', container: 'permit-container' },
-      { file: 'pma-checklist.html', container: 'pma-container' },
-      { file: 'wishlist-partial.html', container: 'wishlist-container' }
+      { file: 'pages/operations-cards.html', container: 'operations-container' },
+      { file: 'pages/permit-playbook.html', container: 'permit-container' },
+      { file: 'pages/pma-checklist.html', container: 'pma-container' },
+      { file: 'pages/wishlist-partial.html', container: 'wishlist-container' }
     ];
 
     // Load each section
-    Promise.all(sections.map(section => 
+    Promise.all(sections.map(section =>
       fetch(section.file)
         .then(response => response.text())
         .then(html => {
