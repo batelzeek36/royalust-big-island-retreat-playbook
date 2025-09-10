@@ -3,6 +3,12 @@
 ROYALUST BIG ISLAND RETREAT - AI Image Generation for Investors
 Generates stunning visualizations of retreat components using OpenAI DALL-E 3
 and automatically integrates them into the wishlist HTML
+
+OPTIMIZED FOR WEB PERFORMANCE:
+- 1024x1024 resolution for faster loading
+- Standard quality for smaller file sizes
+- Auto-optimization with Pillow if available
+- 50% cost reduction vs HD images
 """
 
 import os
@@ -27,8 +33,8 @@ def generate_image(prompt, filename_prefix):
         "model": "dall-e-3",
         "prompt": prompt,
         "n": 1,
-        "size": "1792x1024",  # Landscape format perfect for presentations
-        "quality": "hd",
+        "size": "1024x1024",  # Optimized for web - smaller file sizes, faster loading
+        "quality": "standard",  # Standard quality for better performance
         "style": "natural"
     }
     
@@ -49,6 +55,25 @@ def generate_image(prompt, filename_prefix):
         filename = f"{filename_prefix}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.png"
         with open(filename, 'wb') as f:
             f.write(img_response.content)
+        
+        # Auto-optimize the image for web use
+        try:
+            from PIL import Image
+            with Image.open(filename) as img:
+                # Convert to RGB if needed and optimize
+                if img.mode in ('RGBA', 'LA'):
+                    background = Image.new('RGB', img.size, (255, 255, 255))
+                    if img.mode == 'RGBA':
+                        background.paste(img, mask=img.split()[-1])
+                    else:
+                        background.paste(img)
+                    img = background
+                
+                # Save optimized version
+                img.save(filename, 'PNG', optimize=True, compress_level=6)
+                print(f"🔧 Optimized {filename} for web")
+        except ImportError:
+            print("💡 Install Pillow for automatic image optimization: pip install Pillow")
         
         print(f"✅ Saved: {filename}")
         return {
@@ -292,7 +317,7 @@ def main():
     
     # Calculate estimated cost
     successful_images = summary['successful']
-    estimated_cost = successful_images * 0.08  # $0.08 per HD DALL-E 3 image
+    estimated_cost = successful_images * 0.04  # $0.04 per standard DALL-E 3 image (1024x1024)
     print(f"💰 Estimated API cost: ${estimated_cost:.2f}")
     print("💡 Perfect for investor pitch decks, websites, and funding presentations!")
 
