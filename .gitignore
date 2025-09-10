@@ -1,0 +1,15 @@
+# Environment variables
+.env
+
+# API keys and secrets
+*api*key*
+*secret*
+
+# Backup files
+*backup*
+
+# Test files with potential secrets
+test_*
+
+# Results that might contain API info
+*results*.json
