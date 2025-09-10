@@ -1,0 +1,111 @@
+{
+  "generation_date": "2025-09-08T09:07:37.736133",
+  "total_images": 17,
+  "successful": 16,
+  "failed": 1,
+  "results": [
+    {
+      "filename": "01_retreat_overview_20250908_090045.png",
+      "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-uiSeSyWNrz5RDZPxuc1wZ1FZ/user-nrj6KoBmNZX0tIhiMaNkTbXi/img-DH7Wf59xv8U0IbzOBm1sxTKx.png?st=2025-09-08T18%3A00%3A45Z&se=2025-09-08T20%3A00%3A45Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=b2c0e1c0-cf97-4e19-8986-8073905d5723&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-08T19%3A00%3A45Z&ske=2025-09-09T19%3A00%3A45Z&sks=b&skv=2024-08-04&sig=ntEvs9sviJZINdlejC8upsGGXeWojKEUC7Nwl%2BU1TMw%3D",
+      "prompt": "Aerial view of a luxury wellness retreat on Hawaii's Big Island, featuring a stunning glass pyramid structure as the centerpiece, surrounded by lush tropical gardens with cacao groves, meditation spaces, and volcanic rock formations. Golden hour lighting with Mauna Kea in the background. Professional architectural photography style, ultra-realistic, 8K quality.",
+      "status": "success"
+    },
+    {
+      "filename": "03_pyramid_interior_soundbath_20250908_090112.png",
+      "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-uiSeSyWNrz5RDZPxuc1wZ1FZ/user-nrj6KoBmNZX0tIhiMaNkTbXi/img-i9okg3ZalTmlh9XzGiDdkBEM.png?st=2025-09-08T18%3A01%3A12Z&se=2025-09-08T20%3A01%3A12Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=b2c0e1c0-cf97-4e19-8986-8073905d5723&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-08T08%3A43%3A09Z&ske=2025-09-09T08%3A43%3A09Z&sks=b&skv=2024-08-04&sig=XE52l58reJ1ufsFekMrlz7hRqyQjr6rquFDz1hgxFqE%3D",
+      "prompt": "Interior of glass pyramid sound bath studio during a ceremony, crystal singing bowls and Tibetan gongs arranged in sacred geometry, participants in meditation poses on comfortable mats, warm amber lighting creating mystical atmosphere, tropical vegetation visible through glass walls. Serene, spiritual, high-end wellness photography.",
+      "status": "success"
+    },
+    {
+      "filename": "04_dj_deck_music_platform_20250908_090137.png",
+      "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-uiSeSyWNrz5RDZPxuc1wZ1FZ/user-nrj6KoBmNZX0tIhiMaNkTbXi/img-vJAW81jQXR1T9tsi16dfOwAQ.png?st=2025-09-08T18%3A01%3A37Z&se=2025-09-08T20%3A01%3A37Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=31d50bd4-689f-439b-a875-f22bd677744d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-08T09%3A46%3A45Z&ske=2025-09-09T09%3A46%3A45Z&sks=b&skv=2024-08-04&sig=3MNMrwgPdy9q1s9YjMpld/QyfgY%2BPw9K9PG7moOXy58%3D",
+      "prompt": "Professional outdoor DJ platform on Hawaii's Big Island, weatherproof modular design with sleek canopy, high-end sound equipment, surrounded by tropical landscaping and volcanic rock features. Directional speakers aimed at intimate gathering area, golden hour lighting, luxury event production aesthetic.",
+      "status": "success"
+    },
+    {
+      "filename": "05_sauna_cold_plunge_therapy_20250908_090205.png",
+      "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-uiSeSyWNrz5RDZPxuc1wZ1FZ/user-nrj6KoBmNZX0tIhiMaNkTbXi/img-jP3hRPAajShX3WUYQEnutaPn.png?st=2025-09-08T18%3A02%3A05Z&se=2025-09-08T20%3A02%3A05Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=32836cae-d25f-4fe9-827b-1c8c59c442cc&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-08T17%3A48%3A34Z&ske=2025-09-09T17%3A48%3A34Z&sks=b&skv=2024-08-04&sig=iTlQaMFrp%2BUtu9sk9V4c53n6E5WVpL/Ulcwk3C1eyEQ%3D",
+      "prompt": "Luxury heat and cold therapy area featuring beautiful wooden barrel sauna and modern cold plunge pool, set among tropical Hawaiian vegetation with volcanic rock accents. Steam rising from sauna, crystal-clear plunge water, bamboo privacy screens, resort-quality wellness facility design.",
+      "status": "success"
+    },
+    {
+      "filename": "06_fire_circle_gathering_20250908_090232.png",
+      "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-uiSeSyWNrz5RDZPxuc1wZ1FZ/user-nrj6KoBmNZX0tIhiMaNkTbXi/img-RT7aiqAA2MJuVqpq7rDb1l3V.png?st=2025-09-08T18%3A02%3A31Z&se=2025-09-08T20%3A02%3A31Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=31d50bd4-689f-439b-a875-f22bd677744d&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-08T19%3A02%3A31Z&ske=2025-09-09T19%3A02%3A31Z&sks=b&skv=2024-08-04&sig=8Uh5o0SYhJzrPF1Eu%2BnzJL%2B5xWn/VC9kphGpliI9WMc%3D",
+      "prompt": "Sacred fire circle gathering space on Hawaii's Big Island at dusk, natural stone seating arranged in perfect circle around contained fire pit, participants in comfortable meditation poses, tropical stars beginning to appear overhead, warm firelight illuminating faces, mystical and community-focused atmosphere.",
+      "status": "success"
+    },
+    {
+      "filename": "07_cacao_grove_food_forest_20250908_090309.png",
+      "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-uiSeSyWNrz5RDZPxuc1wZ1FZ/user-nrj6KoBmNZX0tIhiMaNkTbXi/img-RJfPdK4Y22S55bdsiwPSTGZc.png?st=2025-09-08T18%3A03%3A02Z&se=2025-09-08T20%3A03%3A02Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=38e27a3b-6174-4d3e-90ac-d7d9ad49543f&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-08T18%3A12%3A15Z&ske=2025-09-09T18%3A12%3A15Z&sks=b&skv=2024-08-04&sig=CZA93w6xh9/h2KyTfz63ZRTXj7bnyXxvSkcMVeFHh30%3D",
+      "prompt": "Thriving cacao grove and food forest on Hawaii's Big Island, mature cacao trees with pods, vanilla vines on trellises, tropical fruit trees including breadfruit and banana, herb spiral garden with medicinal plants, permaculture design principles, lush and abundant agricultural paradise.",
+      "status": "success"
+    },
+    {
+      "filename": "08_hammock_grove_relaxation_20250908_090333.png",
+      "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-uiSeSyWNrz5RDZPxuc1wZ1FZ/user-nrj6KoBmNZX0tIhiMaNkTbXi/img-uuiDvq5pC0NiGY0i01kgpy6y.png?st=2025-09-08T18%3A03%3A33Z&se=2025-09-08T20%3A03%3A33Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=b2c0e1c0-cf97-4e19-8986-8073905d5723&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-08T10%3A41%3A28Z&ske=2025-09-09T10%3A41%3A28Z&sks=b&skv=2024-08-04&sig=KXYPkaTQqaMbpFcNXE4jG6sFOe3329qJ9VIM2SuYhiQ%3D",
+      "prompt": "Peaceful hammock grove under native Hawaiian trees, multiple comfortable hammocks and swing nets suspended between tropical hardwoods, dappled sunlight filtering through canopy, volcanic rock pathways, ultimate relaxation zone with luxury resort ambiance.",
+      "status": "success"
+    },
+    {
+      "filename": "09_tea_pagoda_meditation_20250908_090356.png",
+      "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-uiSeSyWNrz5RDZPxuc1wZ1FZ/user-nrj6KoBmNZX0tIhiMaNkTbXi/img-NRGH8ih4Nzd6ouYFgbtztxpC.png?st=2025-09-08T18%3A03%3A56Z&se=2025-09-08T20%3A03%3A56Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=b2c0e1c0-cf97-4e19-8986-8073905d5723&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-07T23%3A40%3A38Z&ske=2025-09-08T23%3A40%3A38Z&sks=b&skv=2024-08-04&sig=yvTgheqa9mA9uEc2Vbz5%2B48uV6doof9QkB08JpgcM4E%3D",
+      "prompt": "Elegant tea pagoda meditation space, traditional Asian-inspired architecture adapted for Hawaiian setting, floor cushions arranged around low tea table, bamboo and tropical wood construction, surrounded by medicinal herb gardens, serene and contemplative atmosphere.",
+      "status": "success"
+    },
+    {
+      "filename": "10_stargaze_platform_night_20250908_090420.png",
+      "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-uiSeSyWNrz5RDZPxuc1wZ1FZ/user-nrj6KoBmNZX0tIhiMaNkTbXi/img-OQRS1fissJUFAppCnMvkEY46.png?st=2025-09-08T18%3A04%3A20Z&se=2025-09-08T20%3A04%3A20Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=0e2a3d55-e963-40c9-9c89-2a1aa28cb3ac&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-08T14%3A16%3A44Z&ske=2025-09-09T14%3A16%3A44Z&sks=b&skv=2024-08-04&sig=K3yKx8rCBR9G5dYlW0mvnEYhhG3g9v38pivcLrLoHYY%3D",
+      "prompt": "Elevated stargazing platform on Hawaii's Big Island at night, comfortable reclining chairs arranged for optimal sky viewing, Milky Way visible overhead, minimal red lighting to preserve night vision, telescopes and binoculars available, romantic and awe-inspiring astronomical experience.",
+      "status": "success"
+    },
+    {
+      "filename": "11_labyrinth_sacred_geometry_20250908_090447.png",
+      "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-uiSeSyWNrz5RDZPxuc1wZ1FZ/user-nrj6KoBmNZX0tIhiMaNkTbXi/img-xM3AMI8MMJkrsfTAcXgtrJdK.png?st=2025-09-08T18%3A04%3A47Z&se=2025-09-08T20%3A04%3A47Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=b2c0e1c0-cf97-4e19-8986-8073905d5723&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-07T22%3A01%3A29Z&ske=2025-09-08T22%3A01%3A29Z&sks=b&skv=2024-08-04&sig=7RFY5QQ/ix36%2BsBtH/JrlZjJMcA8M7A26875IKhfJqk%3D",
+      "prompt": "Sacred labyrinth made from native Hawaiian lava rock, perfect spiral pattern set in tropical landscape, walking meditation path with native plants and flowers, Mount Mauna Kea visible in distance, spiritual pilgrimage destination with ancient wisdom meets modern wellness design.",
+      "status": "success"
+    },
+    {
+      "filename": "12_lighting_visual_magic_20250908_090517.png",
+      "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-uiSeSyWNrz5RDZPxuc1wZ1FZ/user-nrj6KoBmNZX0tIhiMaNkTbXi/img-E9nJQnLWRKd2iUjWUmS6ja3a.png?st=2025-09-08T18%3A05%3A17Z&se=2025-09-08T20%3A05%3A17Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=0e2a3d55-e963-40c9-9c89-2a1aa28cb3ac&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-08T14%3A25%3A41Z&ske=2025-09-09T14%3A25%3A41Z&sks=b&skv=2024-08-04&sig=35Zz/G9VU3WXwpb/napCo9cluNMNKwcvVadAqxSXzN4%3D",
+      "prompt": "Magical evening lighting display throughout retreat grounds, warm amber uplights on tropical trees, subtle pixel strips along pathways, projection mapping on pyramid structure, low atmospheric haze creating beam texture, enchanting and mystical ambiance without light pollution.",
+      "status": "success"
+    },
+    {
+      "filename": "13_outdoor_kitchen_dining_20250908_090545.png",
+      "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-uiSeSyWNrz5RDZPxuc1wZ1FZ/user-nrj6KoBmNZX0tIhiMaNkTbXi/img-WZSOsOED5ViX4SIR2YHuahRP.png?st=2025-09-08T18%3A05%3A45Z&se=2025-09-08T20%3A05%3A45Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=b2c0e1c0-cf97-4e19-8986-8073905d5723&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-08T01%3A41%3A39Z&ske=2025-09-09T01%3A41%3A39Z&sks=b&skv=2024-08-04&sig=cBlfAzEIJ7jdgiKYcSb/CNGaCDjxGmRjeHAPWKk3rWw%3D",
+      "prompt": "Beautiful outdoor demonstration kitchen and dining area, professional prep stations under elegant canopy, farm-to-table setup with fresh local produce displayed, tropical hardwood surfaces, stainless steel equipment, guests enjoying healthy plant-based cuisine, luxury catering aesthetic.",
+      "status": "success"
+    },
+    {
+      "filename": "14_solar_power_sustainability_20250908_090611.png",
+      "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-uiSeSyWNrz5RDZPxuc1wZ1FZ/user-nrj6KoBmNZX0tIhiMaNkTbXi/img-7bFbyyGzhUrTX7wqgRBTE4hI.png?st=2025-09-08T18%3A06%3A11Z&se=2025-09-08T20%3A06%3A11Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=c6569cb0-0faa-463d-9694-97df3dc1dfb1&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-08T13%3A56%3A23Z&ske=2025-09-09T13%3A56%3A23Z&sks=b&skv=2024-08-04&sig=PxVrM/FtNFwmjBca8ACUaL5sklx9%2BcSsNAvCqQgtHg8%3D",
+      "prompt": "Modern solar power installation integrated seamlessly into tropical landscape, sleek solar panels positioned among native vegetation, battery storage system housed in attractive enclosure, sustainable technology meeting luxury resort standards, environmental responsibility showcase.",
+      "status": "success"
+    },
+    {
+      "filename": "15_arrival_welcome_experience_20250908_090641.png",
+      "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-uiSeSyWNrz5RDZPxuc1wZ1FZ/user-nrj6KoBmNZX0tIhiMaNkTbXi/img-PRI2CPuJrA6AUXQtfuxkQnDF.png?st=2025-09-08T18%3A06%3A40Z&se=2025-09-08T20%3A06%3A40Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=b2c0e1c0-cf97-4e19-8986-8073905d5723&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-08T18%3A28%3A16Z&ske=2025-09-09T18%3A28%3A16Z&sks=b&skv=2024-08-04&sig=YPUOMenbAc7kzqEE1sqGNg0TVUdxYj%2Bf3g42%2BP69qrQ%3D",
+      "prompt": "Welcoming arrival experience at retreat entrance, beautiful natural stone pathway lined with tropical flowers, elegant signage incorporating sacred geometry, staff member offering traditional Hawaiian welcome with lei and refreshing tea, luxury hospitality meets authentic cultural respect.",
+      "status": "success"
+    },
+    {
+      "filename": "16_workshop_shade_structures_20250908_090709.png",
+      "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-uiSeSyWNrz5RDZPxuc1wZ1FZ/user-nrj6KoBmNZX0tIhiMaNkTbXi/img-Ajp9Hjp0CURJ0361aaSghZND.png?st=2025-09-08T18%3A07%3A10Z&se=2025-09-08T20%3A07%3A10Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=38e27a3b-6174-4d3e-90ac-d7d9ad49543f&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-08T17%3A09%3A45Z&ske=2025-09-09T17%3A09%3A45Z&sks=b&skv=2024-08-04&sig=vY9oUJq6/geCT33mTFk37Sh4moCEx81LFjI3XCHlZZg%3D",
+      "prompt": "Elegant shade sail structures creating outdoor workshop spaces, modern tensioned fabric canopies in earth tones, comfortable seating arrangements for group activities, tropical landscaping integration, professional event space design meeting luxury wellness standards.",
+      "status": "success"
+    },
+    {
+      "filename": "17_water_sanitation_facilities_20250908_090734.png",
+      "url": "https://oaidalleapiprodscus.blob.core.windows.net/private/org-uiSeSyWNrz5RDZPxuc1wZ1FZ/user-nrj6KoBmNZX0tIhiMaNkTbXi/img-wc3V3RaxpAPJM2MUBe4uAWbo.png?st=2025-09-08T18%3A07%3A34Z&se=2025-09-08T20%3A07%3A34Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=b2c0e1c0-cf97-4e19-8986-8073905d5723&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-09-07T21%3A16%3A36Z&ske=2025-09-08T21%3A16%3A36Z&sks=b&skv=2024-08-04&sig=U7Lquv/noegR2zij53BfNEUY38COj8nhwhvByD/JViQ%3D",
+      "prompt": "Beautifully designed sanitation facilities integrated into landscape, modern composting toilets housed in attractive natural wood structures, hand-washing stations with bamboo privacy screens, tropical plantings for natural screening, luxury eco-resort bathroom facilities.",
+      "status": "success"
+    },
+    {
+      "filename": "18_complete_retreat_sunset_error",
+      "url": null,
+      "prompt": "Complete Hawaii Big Island wellness retreat at golden hour sunset, all facilities visible in harmonious composition: glass pyramid centerpiece, DJ platform, sauna area, cacao groves, fire circle, pathways with lighting, guests enjoying various activities, luxury destination resort showcasing investment potential and visitor experience.",
+      "status": "error",
+      "error": "400 Client Error: Bad Request for url: https://api.openai.com/v1/images/generations"
+    }
+  ]
+}
