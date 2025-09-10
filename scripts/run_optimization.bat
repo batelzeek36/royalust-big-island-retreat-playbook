@@ -4,7 +4,7 @@ pip install Pillow
 
 echo.
 echo Starting image optimization...
-python optimize_images.py
+python scripts/optimize_images.py
 
 echo.
 echo Optimization complete! Check the images/ folder for results.

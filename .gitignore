@@ -1,18 +1,20 @@
 # Environment variables
 .env
+config/.env
 
 # API keys and secrets
 *api*key*
 *secret*
 
 # Backup files
+backups/
 *backup*
 
 # Test files with potential secrets
 test_*
 
 # Results that might contain API info
-*results*.json
+config/*results*.json
 
 # Large original images - keep optimized versions only
 original_images/
@@ -20,3 +22,12 @@ original_images/
 
 # Keep optimized images for web
 !images/
+
+# IDE and system files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp

@@ -1,167 +1,136 @@
-# 🌺🌋 Royalust Big Island Retreat - AI Image Generation
+# 🌺 ROYALUST Big Island Retreat - Project Repository
 
-Generate stunning AI images for all components of your Hawaiian retreat using the Higgsfield API.
-
-## 🎯 What This Does
-
-This tool automatically generates **18 high-quality AI images** covering every major element of your Big Island retreat:
-
-- **Core Infrastructure**: DJ platform, glass pyramid sanctuary, sauna/cold plunge
-- **Gardens & Food Forest**: Cacao groves, medicinal herb spirals, permaculture designs  
-- **Experience Zones**: Hammock groves, tea pagodas, stargazing platforms
-- **Sacred Spaces**: Fire circles, labyrinths, ceremony setups
-- **Ambiance**: Lighting designs, projection mapping, sunset views
-- **Overview Shots**: Aerial views, entrance, landscape vistas
+A comprehensive wellness retreat development project featuring AI-generated visualizations, operational playbooks, and investor documentation.
 
 ## 🚀 Quick Start
 
-### Prerequisites
-- Python 3.7+ installed
-- Higgsfield API account (free signup at [platform.higgsfield.ai](https://platform.higgsfield.ai))
+1. **View the main site**: Open `index.html` in your browser
+2. **Generate new images**: Run `scripts/run_image_generation.bat`
+3. **Optimize images**: Run `scripts/run_optimization.bat`
 
-### Step 1: Get API Credentials
-1. Visit [https://platform.higgsfield.ai](https://platform.higgsfield.ai)
-2. Sign up or log in to your account
-3. Go to the **Quickstart** section in your dashboard
-4. Copy your **API Key** and **API Secret** (⚠️ shown only once - save them!)
-
-### Step 2: Run the Generator
-
-**Windows:**
-```cmd
-run_image_generation.bat
-```
-
-**Mac/Linux:**
-```bash
-# Install dependencies
-pip install requests
-
-# Set your credentials
-export HIGGSFIELD_API_KEY="your-api-key-here"
-export HIGGSFIELD_API_SECRET="your-api-secret-here"
-
-# Run the generator
-python generate_retreat_images.py
-```
-
-### Step 3: Get Your Images
-- Generation takes **15-20 minutes** total (18 images × ~1 min each)
-- Progress updates show in real-time
-- All image URLs saved to `retreat_images_results.json`
-- Images are hosted by Higgsfield for 30 days
-
-## 📁 Generated Images
-
-| Category | Images | Format |
-|----------|--------|--------|
-| **Infrastructure** | DJ deck, pyramid, sauna/plunge, fire circle | 1920×1080 |
-| **Gardens** | Food forest, herb spiral, cacao grove | 1920×1080 |
-| **Experience** | Hammocks, tea pagoda, stargazing deck | 1920×1080 |
-| **Sacred** | Labyrinth, ceremonies, sound baths | 1024×1024 |
-| **Ambiance** | Lighting, projections, landscapes | 1920×1080 |
-| **Overview** | Aerial view, entrance, sunset | 1920×1080 |
-
-## 💰 Cost Estimate
-
-- **Higgsfield Pricing**: ~$1 USD = 16 credits
-- **Per Image Cost**: ~2-4 credits (1080p quality)
-- **Total Cost**: ~$3-5 USD for all 18 images
-
-## 🔧 Advanced Usage
-
-### Custom Image Generation
-Edit `generate_retreat_images.py` to modify prompts or add new images:
-
-```python
-{
-    "prompt": "Your custom prompt here, Hawaiian tropical setting, cinematic quality",
-    "filename": "custom_image_name",
-    "width_height": "1920x1080"  # or "1024x1024"
-}
-```
-
-### Batch Sizes
-Generate multiple variations by changing `batch_size`:
-```python
-batch_size=3  # Generates 3 variations per prompt
-```
-
-### Quality Settings
-- `"720p"` - Faster, lower cost
-- `"1080p"` - Higher quality (recommended)
-
-## 📊 Results Format
-
-The `retreat_images_results.json` file contains:
-```json
-[
-  {
-    "filename": "glass_pyramid_sanctuary",
-    "prompt": "Stunning glass pyramid structure in Hawaiian tropical forest...",
-    "url": "https://higgsfield-generated-image-url.com/image.jpg"
-  }
-]
-```
-
-## 🛠️ Troubleshooting
-
-### Common Issues
-
-**"API Key Invalid"**
-- Double-check your credentials from the Higgsfield dashboard
-- Make sure you're using the API key, not your login password
-
-**"Generation Failed"**
-- Check your account credit balance
-- Some prompts may be filtered for content policy
-- Try running again - temporary API issues can occur
-
-**"Python Not Found"**
-- Install Python from [python.org](https://python.org)
-- Make sure Python is added to your system PATH
-
-**"Timeout Errors"**
-- Images can take 30-90 seconds each to generate
-- Script waits up to 5 minutes per image
-- Check your internet connection
-
-### Rate Limits
-- First 1,000 generations: max 2 concurrent jobs
-- Script includes automatic delays between requests
-- If you hit limits, wait a few minutes and resume
-
-## 📝 File Structure
+## 📁 Project Structure
 
 ```
-├── generate_retreat_images.py    # Main generation script
-├── run_image_generation.bat      # Windows launcher
-├── README.md                     # This file
-├── wishlist.txt                  # Original retreat blueprint
-├── higgsfield API.txt           # API documentation
-└── retreat_images_results.json  # Generated image URLs (created after run)
+├── 📄 Main HTML Files
+│   ├── index.html                    # Main landing page
+│   ├── wishlist-partial.html         # Retreat components wishlist
+│   ├── operations-cards.html         # Operations overview
+│   ├── permit-playbook.html          # Permitting guide
+│   ├── pma-checklist.html           # PMA compliance checklist
+│   └── royalust_big_island_retreat_ops_playbook_investor_edition.html
+│
+├── 🎨 Assets
+│   ├── images/                       # Optimized WebP images
+│   │   ├── webp/                    # Full-size WebP images
+│   │   ├── medium/                  # 800px WebP images
+│   │   └── thumbnails/              # 300px WebP images
+│   ├── original_images/             # Original PNG files (not in Git)
+│   └── reference-images/            # Reference photos and examples
+│
+├── 🛠️ Scripts
+│   ├── generate_investor_images.py  # AI image generation (OpenAI DALL-E 3)
+│   ├── optimize_images.py           # Image optimization (PNG → WebP)
+│   ├── update_html_images.py        # Update HTML with responsive images
+│   ├── run_image_generation.bat     # Windows batch for image generation
+│   └── run_optimization.bat         # Windows batch for optimization
+│
+├── 📚 Documentation
+│   ├── README.md                    # This file
+│   ├── AI_IMAGE_SETUP.md           # AI image generation setup
+│   ├── MODULARIZATION.md           # Project modularization guide
+│   ├── Info.txt                    # Project information
+│   ├── wishlist.txt                # Original wishlist
+│   ├── higgsfield API.txt          # API documentation
+│   └── ROYALUST × Big Island Retreat Ops Playbook — Investor Edition.pdf
+│
+├── ⚙️ Configuration
+│   ├── .env.example                # Environment variables template
+│   ├── investor_images_results.json # Image generation results
+│   └── optimization_results.json   # Image optimization results
+│
+├── 🗄️ Backups
+│   ├── *.backup                    # HTML file backups
+│   └── old versions/               # Previous file versions
+│
+└── 🎯 Core Files
+    ├── styles.css                  # Main stylesheet
+    ├── script.js                   # JavaScript functionality
+    └── .gitignore                  # Git ignore rules
 ```
 
-## 🎨 Using Your Images
+## 🎨 Image Optimization System
 
-Once generated, you can:
-- Download images directly from the URLs
-- Use in presentations, websites, marketing materials
-- Share with investors, partners, or team members
-- Create mood boards and design references
+Our images are **87.8% smaller** than originals thanks to:
 
-**Note**: Images are hosted by Higgsfield for 30 days. Download and save locally for permanent storage.
+- **WebP format** with 85% quality
+- **Responsive sizing**: thumbnails (300px), medium (800px), full-size
+- **Lazy loading** for better performance
+- **Progressive enhancement** with PNG fallbacks
 
-## 🆘 Support
+### Image Loading Strategy:
+- **Mobile** (< 600px): 300px thumbnails (~10-20 KB)
+- **Tablet** (< 1200px): 800px medium images (~50-150 KB)
+- **Desktop**: Full WebP images (~200-600 KB)
+- **Fallback**: Original PNGs for older browsers
 
-- **Higgsfield API Issues**: Check [platform.higgsfield.ai](https://platform.higgsfield.ai) status
-- **Script Issues**: Review error messages and check troubleshooting section
-- **Custom Modifications**: Edit the prompts array in `generate_retreat_images.py`
+## 🤖 AI Image Generation
 
-## 📄 License
+Generate stunning retreat visualizations using OpenAI DALL-E 3:
 
-This tool is for generating images for the Royalust Big Island Retreat project. Generated images follow Higgsfield's terms of service.
+1. Set your API key: `$env:OPENAI_API_KEY='your-key-here'`
+2. Run: `scripts/run_image_generation.bat`
+3. Images are automatically optimized and integrated into HTML
+
+**Features:**
+- 18 unique retreat component visualizations
+- Professional architectural photography style
+- Optimized for web (1024x1024, standard quality)
+- 50% cost reduction vs HD images
+
+## 🏗️ Development Workflow
+
+1. **Make changes** to HTML/CSS/JS files
+2. **Generate new images** if needed with AI scripts
+3. **Optimize images** for web performance
+4. **Test locally** by opening HTML files
+5. **Commit and push** to GitHub
+
+## 📊 Performance Metrics
+
+- **Total image size**: 102.8 MB → 12.6 MB (87.8% reduction)
+- **Loading speed**: 10-20x faster on mobile
+- **Bandwidth savings**: 90% less data usage
+- **SEO improvement**: Faster page load times
+
+## 🌟 Key Features
+
+- **Glass Pyramid Sound Bath Sanctum** - Sacred geometry centerpiece
+- **Professional DJ Platform** - Weatherproof music production
+- **Sauna & Cold Plunge** - Luxury wellness therapy
+- **Cacao Grove & Food Forest** - Sustainable agriculture
+- **Sacred Fire Circle** - Community gathering space
+- **Stargazing Platform** - Astronomical experiences
+
+## 💰 Investment Highlights
+
+- **Modular development** approach for phased investment
+- **Permit-compliant** design within Big Island regulations
+- **Sustainable systems** with solar power and water management
+- **Scalable operations** from intimate retreats to larger events
+- **Multiple revenue streams** from workshops, ceremonies, and accommodations
+
+## 🔧 Technical Stack
+
+- **Frontend**: HTML5, CSS3, JavaScript
+- **Images**: WebP with PNG fallbacks, responsive loading
+- **AI Generation**: OpenAI DALL-E 3 API
+- **Optimization**: Python with Pillow library
+- **Version Control**: Git with organized branch structure
+
+## 📞 Contact
+
+For questions about this project or investment opportunities, please refer to the documentation in the `docs/` folder.
 
 ---
 
-**Ready to visualize your retreat? Run the generator and bring your vision to life! 🌺**
+*Built with ❤️ for sustainable wellness tourism in Hawaii*
